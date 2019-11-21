@@ -11,8 +11,6 @@ import RealityKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var arView: ARView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

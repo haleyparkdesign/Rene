@@ -14,6 +14,8 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
     private let appleNode = SCNNode()
     private var scale: CGFloat = 1
     
+    @IBOutlet weak var unsupportedLabel: UILabel!
+    
     
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
@@ -28,8 +30,8 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         print("successfully saved image")
     }
     
+    
     @IBOutlet var sceneView: ARSCNView!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +42,11 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         sceneView.delegate = self
+        unsupportedLabel.isHidden = true
          
         guard ARFaceTrackingConfiguration.isSupported else {
-            print("Face tracking is not supported on this device")
+            // show unsupported device message
+            unsupportedLabel.isHidden = false
             return
         }
     }
