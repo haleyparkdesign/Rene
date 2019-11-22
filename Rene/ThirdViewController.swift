@@ -16,10 +16,17 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var unsupportedLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
         UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(savedImage), nil)
+        
+        // vibration feedback
+        AudioServicesPlaySystemSound(1519)
+        
+        // display picture taken
+        imageView.image = screenshot
     }
     
     @objc func savedImage(_ im:UIImage, error:Error?, context:UnsafeMutableRawPointer?) {

@@ -113,18 +113,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-XS-ofj">
-                                <rect key="frame" x="287" y="567" width="48" height="48"/>
+                                <rect key="frame" x="295" y="567" width="48" height="48"/>
                                 <state key="normal" image="Info"/>
                                 <connections>
                                     <segue destination="SZu-6o-mEL" kind="show" id="ZdG-Ad-7zm"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73u-rW-h1A">
-                                <rect key="frame" x="37" y="567" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="73u-rW-h1A">
+                                <rect key="frame" x="32" y="567" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Dy0-iu-YzY"/>
+                                    <constraint firstAttribute="width" constant="48" id="Eaw-qL-ZfE"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15N-38-6Rp">
-                                <rect key="frame" x="151" y="555" width="72" height="72"/>
+                                <rect key="frame" x="151.5" y="555" width="72" height="72"/>
                                 <state key="normal" image="takePhoto"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="aXe-9K-xLk" eventType="touchUpInside" id="rte-wI-DIJ"/>
@@ -137,9 +140,11 @@
                             <constraint firstItem="15N-38-6Rp" firstAttribute="centerX" secondItem="QxQ-Ik-X0P" secondAttribute="centerX" id="74W-XO-v0R"/>
                             <constraint firstItem="djm-8N-PaO" firstAttribute="leading" secondItem="g1b-71-9Vy" secondAttribute="leading" id="93v-RX-j4R"/>
                             <constraint firstItem="xNM-XS-ofj" firstAttribute="centerY" secondItem="15N-38-6Rp" secondAttribute="centerY" id="CPQ-Ar-eeD"/>
-                            <constraint firstItem="g1b-71-9Vy" firstAttribute="trailing" secondItem="xNM-XS-ofj" secondAttribute="trailing" constant="40" id="JuQ-hy-uTv"/>
+                            <constraint firstItem="g1b-71-9Vy" firstAttribute="trailing" secondItem="xNM-XS-ofj" secondAttribute="trailing" constant="32" id="JuQ-hy-uTv"/>
                             <constraint firstItem="djm-8N-PaO" firstAttribute="bottom" secondItem="g1b-71-9Vy" secondAttribute="bottom" id="K17-k7-leP"/>
                             <constraint firstItem="djm-8N-PaO" firstAttribute="top" secondItem="g1b-71-9Vy" secondAttribute="top" constant="-44" id="KOX-vO-ksM"/>
+                            <constraint firstItem="73u-rW-h1A" firstAttribute="leading" secondItem="g1b-71-9Vy" secondAttribute="leading" constant="32" id="RSU-e2-CEk"/>
+                            <constraint firstItem="g1b-71-9Vy" firstAttribute="bottom" secondItem="73u-rW-h1A" secondAttribute="bottom" constant="52" id="YcD-il-eXS"/>
                             <constraint firstItem="g1b-71-9Vy" firstAttribute="bottom" secondItem="xNM-XS-ofj" secondAttribute="bottom" constant="52" id="ouZ-dT-8vw"/>
                             <constraint firstItem="djm-8N-PaO" firstAttribute="trailing" secondItem="g1b-71-9Vy" secondAttribute="trailing" id="vbJ-4R-J6k"/>
                         </constraints>
@@ -148,6 +153,7 @@
                     <navigationItem key="navigationItem" id="Cyg-Bu-4dk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="imageView" destination="73u-rW-h1A" id="LhB-W5-WPe"/>
                         <outlet property="sceneView" destination="djm-8N-PaO" id="L5J-fH-qgX"/>
                     </connections>
                 </viewController>
@@ -253,7 +259,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7i-Np-pyc">
-                                <rect key="frame" x="287" y="567" width="48" height="48"/>
+                                <rect key="frame" x="295" y="567" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="TxP-9m-Ruz"/>
                                     <constraint firstAttribute="width" constant="48" id="zL8-VF-6CB"/>
@@ -272,10 +278,21 @@ ARKit face tracking requires a device with a TrueDepth front-facing camera.</str
                                 <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ERx-Zd-dkg">
+                                <rect key="frame" x="32" y="567" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="2Ib-Qe-Iun"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Uyo-hR-rIs"/>
+                                    <constraint firstAttribute="width" constant="48" id="XMp-rR-bp4"/>
+                                    <constraint firstAttribute="height" constant="48" id="rJq-i3-G9G"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aCb-V9-cIa" firstAttribute="leading" secondItem="2G1-nf-lCY" secondAttribute="leading" id="9f7-2i-Rr7"/>
+                            <constraint firstItem="ERx-Zd-dkg" firstAttribute="leading" secondItem="2G1-nf-lCY" secondAttribute="leading" constant="32" id="Cog-Rc-hgX"/>
+                            <constraint firstItem="2G1-nf-lCY" firstAttribute="bottom" secondItem="ERx-Zd-dkg" secondAttribute="bottom" constant="52" id="H9k-90-Qsa"/>
                             <constraint firstItem="aCb-V9-cIa" firstAttribute="bottom" secondItem="2G1-nf-lCY" secondAttribute="bottom" id="NM1-Z8-HPe"/>
                             <constraint firstItem="oqn-wU-1Uj" firstAttribute="centerX" secondItem="eqn-5A-PQo" secondAttribute="centerX" id="QVg-5m-a13"/>
                             <constraint firstItem="aCb-V9-cIa" firstAttribute="trailing" secondItem="2G1-nf-lCY" secondAttribute="trailing" id="R97-p9-380"/>
@@ -283,7 +300,7 @@ ARKit face tracking requires a device with a TrueDepth front-facing camera.</str
                             <constraint firstItem="IdG-5T-AOE" firstAttribute="centerX" secondItem="eqn-5A-PQo" secondAttribute="centerX" id="ekl-mq-Xkl"/>
                             <constraint firstItem="oqn-wU-1Uj" firstAttribute="centerY" secondItem="eqn-5A-PQo" secondAttribute="centerY" id="hKL-E7-RbR"/>
                             <constraint firstItem="oqn-wU-1Uj" firstAttribute="leading" secondItem="2G1-nf-lCY" secondAttribute="leading" constant="32" id="kQF-sy-lst"/>
-                            <constraint firstItem="2G1-nf-lCY" firstAttribute="trailing" secondItem="B7i-Np-pyc" secondAttribute="trailing" constant="40" id="qrN-92-zg4"/>
+                            <constraint firstItem="2G1-nf-lCY" firstAttribute="trailing" secondItem="B7i-Np-pyc" secondAttribute="trailing" constant="32" id="qrN-92-zg4"/>
                             <constraint firstItem="2G1-nf-lCY" firstAttribute="bottom" secondItem="IdG-5T-AOE" secondAttribute="bottom" constant="40" id="spK-FB-Vrj"/>
                             <constraint firstItem="2G1-nf-lCY" firstAttribute="bottom" secondItem="B7i-Np-pyc" secondAttribute="bottom" constant="52" id="vtC-lq-EAY"/>
                             <constraint firstItem="aCb-V9-cIa" firstAttribute="top" secondItem="eqn-5A-PQo" secondAttribute="top" id="vvY-xe-x6h"/>
@@ -292,6 +309,7 @@ ARKit face tracking requires a device with a TrueDepth front-facing camera.</str
                     </view>
                     <navigationItem key="navigationItem" id="wmQ-ua-i8e"/>
                     <connections>
+                        <outlet property="imageView" destination="ERx-Zd-dkg" id="mQv-pK-LwO"/>
                         <outlet property="sceneView" destination="aCb-V9-cIa" id="pkI-v6-9kt"/>
                         <outlet property="unsupportedLabel" destination="oqn-wU-1Uj" id="Gwk-qS-5L6"/>
                     </connections>
@@ -686,7 +704,7 @@ At the start of 1946 Margritte was painting in both his realist style and his im
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-mH-SSH">
-                                <rect key="frame" x="287" y="567" width="48" height="48"/>
+                                <rect key="frame" x="295" y="567" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="acj-P5-9DM"/>
                                     <constraint firstAttribute="width" constant="48" id="g2e-qc-mHb"/>
@@ -705,12 +723,25 @@ ARKit face tracking requires a device with a TrueDepth front-facing camera.</str
                                 <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-zT-osN">
+                                <rect key="frame" x="32" y="567" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="7Oo-5N-lXU"/>
+                                    <constraint firstAttribute="height" constant="48" id="ARo-dv-nQt"/>
+                                    <constraint firstAttribute="width" constant="48" id="DxG-cu-Edh"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="48" id="XID-ey-fEo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="amF-Va-26o"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="eIr-7c-JZL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hM9-Ct-5a8" firstAttribute="bottom" secondItem="mWv-mH-SSH" secondAttribute="bottom" constant="52" id="1Dq-8Y-pSi"/>
+                            <constraint firstItem="sFx-zT-osN" firstAttribute="leading" secondItem="hM9-Ct-5a8" secondAttribute="leading" constant="32" id="55r-aq-Cqz"/>
                             <constraint firstItem="t0v-aJ-0b5" firstAttribute="centerX" secondItem="w4G-ty-3su" secondAttribute="centerX" id="7fj-ed-dSO"/>
                             <constraint firstItem="OpU-iy-i16" firstAttribute="centerX" secondItem="w4G-ty-3su" secondAttribute="centerX" id="Cji-5I-hYU"/>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="bottom" secondItem="sFx-zT-osN" secondAttribute="bottom" constant="52" id="LbZ-rx-S6X"/>
                             <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="top" secondItem="w4G-ty-3su" secondAttribute="top" id="TL2-Cd-hYF"/>
                             <constraint firstItem="t0v-aJ-0b5" firstAttribute="leading" secondItem="hM9-Ct-5a8" secondAttribute="leading" constant="32" id="Vxe-g0-Gxw"/>
                             <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="bottom" secondItem="hM9-Ct-5a8" secondAttribute="bottom" id="hAs-Sf-a39"/>
@@ -719,12 +750,13 @@ ARKit face tracking requires a device with a TrueDepth front-facing camera.</str
                             <constraint firstItem="hM9-Ct-5a8" firstAttribute="bottom" secondItem="OpU-iy-i16" secondAttribute="bottom" constant="40" id="vLr-i7-Xdg"/>
                             <constraint firstItem="hM9-Ct-5a8" firstAttribute="trailing" secondItem="t0v-aJ-0b5" secondAttribute="trailing" constant="32" id="vcv-jH-1p3"/>
                             <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="trailing" secondItem="hM9-Ct-5a8" secondAttribute="trailing" id="wHs-Tc-34u"/>
-                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="trailing" secondItem="mWv-mH-SSH" secondAttribute="trailing" constant="40" id="wsV-S1-fXu"/>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="trailing" secondItem="mWv-mH-SSH" secondAttribute="trailing" constant="32" id="wsV-S1-fXu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hM9-Ct-5a8"/>
                     </view>
                     <navigationItem key="navigationItem" id="wER-aS-Qov"/>
                     <connections>
+                        <outlet property="imageView" destination="sFx-zT-osN" id="eyt-dF-3yI"/>
                         <outlet property="sceneView" destination="cpJ-Cg-Ex8" id="Ro9-Qw-2tS"/>
                         <outlet property="unsupportedLabel" destination="t0v-aJ-0b5" id="CqN-Um-RpS"/>
                     </connections>

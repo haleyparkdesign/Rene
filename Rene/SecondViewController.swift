@@ -9,13 +9,22 @@
 import UIKit
 import SceneKit
 import ARKit
+import AudioToolbox // for haptic feedback
 
 class SecondViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
         UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(savedImage), nil)
+        
+        // vibration feedback
+        AudioServicesPlaySystemSound(1519)
+        
+        // display picture taken
+        imageView.image = screenshot
     }
     
     @objc func savedImage(_ im:UIImage, error:Error?, context:UnsafeMutableRawPointer?) {
@@ -23,10 +32,11 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
             print(err)
             return
         }
+        
         print("successfully saved image")
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Golconda"
