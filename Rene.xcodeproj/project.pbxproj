@@ -13,6 +13,7 @@
 		972F55B22383648B008F46BF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F55B12383648B008F46BF /* ThirdViewController.swift */; };
 		975332352378CD2A005E85A2 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 975332342378CD2A005E85A2 /* Models.scnassets */; };
 		97533238237933E7005E85A2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97533237237933E7005E85A2 /* AboutViewController.swift */; };
+		977BA13F23886F8F0098031D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BA13E23886F8F0098031D /* FourthViewController.swift */; };
 		97DA630D2373DB3100263CD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DA630C2373DB3100263CD1 /* AppDelegate.swift */; };
 		97DA630F2373DB3100263CD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DA630E2373DB3100263CD1 /* ViewController.swift */; };
 		97DA63142373DB3100263CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97DA63122373DB3100263CD1 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		972F55B12383648B008F46BF /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		975332342378CD2A005E85A2 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		97533237237933E7005E85A2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		977BA13E23886F8F0098031D /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		97DA63092373DB3100263CD1 /* Rene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DA630C2373DB3100263CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97DA630E2373DB3100263CD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				97017C32237493D5009982A2 /* FirstViewController.swift */,
 				97017C302374908A009982A2 /* SecondViewController.swift */,
 				972F55B12383648B008F46BF /* ThirdViewController.swift */,
+				977BA13E23886F8F0098031D /* FourthViewController.swift */,
 				971AE5E62385F17E00BCBBFA /* InfoViewController.swift */,
 			);
 			path = Rene;
@@ -293,6 +296,7 @@
 				972F55B22383648B008F46BF /* ThirdViewController.swift in Sources */,
 				97017C312374908A009982A2 /* SecondViewController.swift in Sources */,
 				97DA630F2373DB3100263CD1 /* ViewController.swift in Sources */,
+				977BA13F23886F8F0098031D /* FourthViewController.swift in Sources */,
 				97DA630D2373DB3100263CD1 /* AppDelegate.swift in Sources */,
 				971AE5E72385F17E00BCBBFA /* InfoViewController.swift in Sources */,
 				97533238237933E7005E85A2 /* AboutViewController.swift in Sources */,

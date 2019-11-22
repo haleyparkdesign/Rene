@@ -21,9 +21,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="ZRS-zt-fFf">
-                                <rect key="frame" x="23" y="60" width="174.5" height="136"/>
+                                <rect key="frame" x="23" y="60" width="163" height="136"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZRS-zt-fFf" secondAttribute="height" multiplier="173:135" id="jBK-DB-9f0"/>
+                                    <constraint firstAttribute="width" secondItem="ZRS-zt-fFf" secondAttribute="height" multiplier="173:135" constant="-11.281481481481478" id="jBK-DB-9f0"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLE-nh-9c5">
@@ -58,6 +58,9 @@
                                     <constraint firstAttribute="width" secondItem="yGc-7a-KMh" secondAttribute="height" multiplier="1:1" id="UMo-gX-rcT"/>
                                 </constraints>
                                 <state key="normal" image="thumb3"/>
+                                <connections>
+                                    <segue destination="Cyu-cJ-ToI" kind="show" id="5Mb-B8-Ihj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJr-2S-LyP">
                                 <rect key="frame" x="23" y="609" width="329" height="58"/>
@@ -460,11 +463,11 @@ Magritte included a likeness of Scutenaire in the painting, his face is used for
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-Kv-7fi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-Kv-7fi">
                                         <rect key="frame" x="20" y="622" width="335" height="674"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="673" id="IGg-v3-DIE"/>
-                                            <constraint firstAttribute="height" constant="811.5" id="boZ-vn-p4N"/>
+                                            <constraint firstAttribute="height" constant="674" id="boZ-vn-p4N"/>
                                         </constraints>
                                         <string key="text">Golconda depicts a scene of nearly identical men dressed in dark overcoats and bowler hats, who seem to be drops of heavy rain (or to be floating like helium balloons, though there is no actual indication of motion), against a backdrop of buildings and blue sky. The men are spaced in hexagonal grids facing the viewpoint and receding back in grid layers.	
 
@@ -481,7 +484,7 @@ As was often the case with Magritte's works, the title Golconda was found by his
                                     <constraint firstItem="NKs-Kv-7fi" firstAttribute="leading" secondItem="RS9-9z-GrH" secondAttribute="leading" constant="20" id="0VG-5F-Pfh"/>
                                     <constraint firstAttribute="trailing" secondItem="u29-0G-hha" secondAttribute="trailing" constant="32" id="0qk-QO-XkF"/>
                                     <constraint firstAttribute="trailing" secondItem="nxR-no-Psz" secondAttribute="trailing" id="7m8-KP-YWI"/>
-                                    <constraint firstItem="nxR-no-Psz" firstAttribute="top" secondItem="RS9-9z-GrH" secondAttribute="top" constant="319" id="ILZ-Zi-t7T"/>
+                                    <constraint firstItem="nxR-no-Psz" firstAttribute="top" secondItem="RS9-9z-GrH" secondAttribute="top" constant="325" id="ILZ-Zi-t7T"/>
                                     <constraint firstItem="u29-0G-hha" firstAttribute="leading" secondItem="RS9-9z-GrH" secondAttribute="leading" constant="24" id="Lq7-5B-WdF"/>
                                     <constraint firstItem="u29-0G-hha" firstAttribute="top" secondItem="RS9-9z-GrH" secondAttribute="top" constant="88" id="cNe-wi-3Te"/>
                                     <constraint firstItem="nxR-no-Psz" firstAttribute="leading" secondItem="RS9-9z-GrH" secondAttribute="leading" id="caP-tA-YkI"/>
@@ -493,7 +496,7 @@ As was often the case with Magritte's works, the title Golconda was found by his
                                     <constraint firstItem="NKs-Kv-7fi" firstAttribute="top" secondItem="nxR-no-Psz" secondAttribute="bottom" constant="24" id="h2a-cZ-pYg"/>
                                     <constraint firstAttribute="trailing" secondItem="nxR-no-Psz" secondAttribute="trailing" id="qk9-Lk-pA5"/>
                                     <constraint firstItem="u29-0G-hha" firstAttribute="leading" secondItem="RS9-9z-GrH" secondAttribute="leading" constant="24" id="qpl-z3-SpL"/>
-                                    <constraint firstAttribute="bottom" secondItem="NKs-Kv-7fi" secondAttribute="bottom" constant="60.5" id="ykc-KB-5jK"/>
+                                    <constraint firstAttribute="bottom" secondItem="NKs-Kv-7fi" secondAttribute="bottom" constant="-64" id="ykc-KB-5jK"/>
                                     <constraint firstAttribute="trailing" secondItem="u29-0G-hha" secondAttribute="trailing" constant="32" id="zZJ-Uy-DSF"/>
                                 </constraints>
                             </scrollView>
@@ -659,9 +662,202 @@ At the start of 1946 Margritte was painting in both his realist style and his im
             </objects>
             <point key="canvasLocation" x="2013.5999999999999" y="1156.8215892053975"/>
         </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="RkV-nz-ol3">
+            <objects>
+                <viewController id="Cyu-cJ-ToI" customClass="FourthViewController" customModule="Rene" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w4G-ty-3su">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-Cg-Ex8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-iy-i16">
+                                <rect key="frame" x="151.5" y="555" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="bK2-YS-2zv"/>
+                                    <constraint firstAttribute="height" constant="72" id="uzG-3T-Oug"/>
+                                </constraints>
+                                <state key="normal" image="takePhoto"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="aXe-9K-xLk" eventType="touchUpInside" id="IJn-VW-35b"/>
+                                    <action selector="takePhoto:" destination="Cyu-cJ-ToI" eventType="touchUpInside" id="p10-Bh-TkF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-mH-SSH">
+                                <rect key="frame" x="287" y="567" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="acj-P5-9DM"/>
+                                    <constraint firstAttribute="width" constant="48" id="g2e-qc-mHb"/>
+                                </constraints>
+                                <state key="normal" image="Info"/>
+                                <connections>
+                                    <segue destination="lO8-3f-Rxh" kind="show" id="Uwu-eu-DWj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0v-aJ-0b5">
+                                <rect key="frame" x="28" y="277" width="319" height="112"/>
+                                <string key="text">Your device doesn't support face tracking feature. 
+
+ARKit face tracking requires a device with a TrueDepth front-facing camera.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="bottom" secondItem="mWv-mH-SSH" secondAttribute="bottom" constant="52" id="1Dq-8Y-pSi"/>
+                            <constraint firstItem="t0v-aJ-0b5" firstAttribute="centerX" secondItem="w4G-ty-3su" secondAttribute="centerX" id="7fj-ed-dSO"/>
+                            <constraint firstItem="OpU-iy-i16" firstAttribute="centerX" secondItem="w4G-ty-3su" secondAttribute="centerX" id="Cji-5I-hYU"/>
+                            <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="top" secondItem="w4G-ty-3su" secondAttribute="top" id="TL2-Cd-hYF"/>
+                            <constraint firstItem="t0v-aJ-0b5" firstAttribute="leading" secondItem="hM9-Ct-5a8" secondAttribute="leading" constant="32" id="Vxe-g0-Gxw"/>
+                            <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="bottom" secondItem="hM9-Ct-5a8" secondAttribute="bottom" id="hAs-Sf-a39"/>
+                            <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="leading" secondItem="hM9-Ct-5a8" secondAttribute="leading" id="hOh-bb-uPL"/>
+                            <constraint firstItem="t0v-aJ-0b5" firstAttribute="centerY" secondItem="w4G-ty-3su" secondAttribute="centerY" id="ndM-7U-E0h"/>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="bottom" secondItem="OpU-iy-i16" secondAttribute="bottom" constant="40" id="vLr-i7-Xdg"/>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="trailing" secondItem="t0v-aJ-0b5" secondAttribute="trailing" constant="32" id="vcv-jH-1p3"/>
+                            <constraint firstItem="cpJ-Cg-Ex8" firstAttribute="trailing" secondItem="hM9-Ct-5a8" secondAttribute="trailing" id="wHs-Tc-34u"/>
+                            <constraint firstItem="hM9-Ct-5a8" firstAttribute="trailing" secondItem="mWv-mH-SSH" secondAttribute="trailing" constant="40" id="wsV-S1-fXu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hM9-Ct-5a8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wER-aS-Qov"/>
+                    <connections>
+                        <outlet property="sceneView" destination="cpJ-Cg-Ex8" id="Ro9-Qw-2tS"/>
+                        <outlet property="unsupportedLabel" destination="t0v-aJ-0b5" id="CqN-Um-RpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="riC-DJ-xTy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="1644"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="ca5-gC-Mbl">
+            <objects>
+                <viewController id="lO8-3f-Rxh" customClass="InfoViewController" customModule="Rene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X49-Td-Lec"/>
+                        <viewControllerLayoutGuide type="bottom" id="MLy-l4-Ve6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k6I-iC-8fz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yle-3s-hMV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Bowler" translatesAutoresizingMaskIntoConstraints="NO" id="CnC-5h-mTu">
+                                        <rect key="frame" x="0.0" y="158" width="375" height="475"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="475" id="fhK-C2-c0U"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="256" id="r8f-uf-fSr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqT-V3-G5Z">
+                                        <rect key="frame" x="20" y="556" width="355" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Man in a Bowler Hat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-CJ-2Ty">
+                                                <rect key="frame" x="24" y="45" width="307" height="75"/>
+                                                <fontDescription key="fontDescription" name="Ogg-Roman" family="Ogg" pointSize="33"/>
+                                                <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1964" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INr-cQ-7VY">
+                                                <rect key="frame" x="24" y="24" width="39" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Xbj-D8-lAf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1843137255" green="0.20000000000000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="INr-cQ-7VY" firstAttribute="top" secondItem="EqT-V3-G5Z" secondAttribute="top" constant="24" id="ImE-Q4-VjG"/>
+                                            <constraint firstItem="INr-cQ-7VY" firstAttribute="leading" secondItem="EqT-V3-G5Z" secondAttribute="leading" constant="24" id="OSk-yF-gtK"/>
+                                            <constraint firstAttribute="bottom" secondItem="MiM-CJ-2Ty" secondAttribute="bottom" constant="20" id="ZiC-cM-Mkj"/>
+                                            <constraint firstItem="MiM-CJ-2Ty" firstAttribute="top" secondItem="INr-cQ-7VY" secondAttribute="bottom" id="hIp-yb-3ha"/>
+                                            <constraint firstItem="MiM-CJ-2Ty" firstAttribute="leading" secondItem="EqT-V3-G5Z" secondAttribute="leading" constant="24" id="pnU-id-uFL"/>
+                                            <constraint firstAttribute="height" constant="140" id="yxY-R4-wsR"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEb-Cb-QBg">
+                                        <rect key="frame" x="20" y="720" width="335" height="818"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="818" id="spa-JF-xpj"/>
+                                        </constraints>
+                                        <mutableString key="text">Magritte used the image of a man wearing a bowler hat in several of his paintings. This painting is perhaps not as well known as other paintings by Magritte, nevertheless, it is easily identified as a painting by Magritte and recalls the well known painting The Son of Man, 1964.
+
+Observe the painting and its details. The man' face is covered, just as if the dove flew into the frame just as Magritte "snapped" the picture. The bird is flying from the man's left to his right, towards the light. We do not see the man's eyes yet we see the bird's left eye; in the painting The Son of Man, 1964 we can see the man's left eye. And the man's tie is a pale pink compared to the bright red tie that appears in The Son of Man, 1964. And unlike that painting, this painting is a closeup "shoulder" shot of the man. Look at the blue background behind him; is that the sky or is he sitting in front of a backdrop for a portrait?
+
+It was the mystery, the sense of wonder, that attracted Magritte and made him so different from most of his fellow Surrealists. Where Joan Miro espoused the "automatic" approach, letting the unconscious determine the line, and Dali reached into the dreamworld, returning to three-dimensional and figurative art in his later work, Magritte kept rigidly to his canon of flat dimensions and frozen images. What he wanted, and what he achieves in his best work, was not so much to challenge the viewer as to intrigue him into seeing life liberated from the concrete and the present.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1843137255" green="0.20000000000000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vEb-Cb-QBg" secondAttribute="bottom" constant="20" id="2mP-zj-nKV"/>
+                                    <constraint firstItem="vEb-Cb-QBg" firstAttribute="leading" secondItem="yle-3s-hMV" secondAttribute="leading" constant="20" id="6sk-A6-cBL"/>
+                                    <constraint firstAttribute="trailing" secondItem="vEb-Cb-QBg" secondAttribute="trailing" constant="20" id="Ij9-5k-Zsg"/>
+                                    <constraint firstItem="CnC-5h-mTu" firstAttribute="top" secondItem="yle-3s-hMV" secondAttribute="top" constant="-0.5" id="RL7-FG-We4"/>
+                                    <constraint firstAttribute="trailing" secondItem="EqT-V3-G5Z" secondAttribute="trailing" id="cP8-HJ-crc"/>
+                                    <constraint firstItem="CnC-5h-mTu" firstAttribute="leading" secondItem="yle-3s-hMV" secondAttribute="leading" id="dpM-5G-96z"/>
+                                    <constraint firstItem="EqT-V3-G5Z" firstAttribute="top" secondItem="yle-3s-hMV" secondAttribute="top" constant="398" id="grH-Ej-ZN1"/>
+                                    <constraint firstItem="vEb-Cb-QBg" firstAttribute="top" secondItem="EqT-V3-G5Z" secondAttribute="bottom" constant="24" id="ptD-TC-KZp"/>
+                                    <constraint firstAttribute="trailing" secondItem="CnC-5h-mTu" secondAttribute="trailing" id="vAY-u3-87T"/>
+                                    <constraint firstItem="EqT-V3-G5Z" firstAttribute="leading" secondItem="yle-3s-hMV" secondAttribute="leading" constant="20" id="wu1-Rv-epS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.93725490199999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yle-3s-hMV" secondAttribute="centerY" id="RuC-Oj-vtg"/>
+                            <constraint firstItem="CnC-5h-mTu" firstAttribute="width" secondItem="k6I-iC-8fz" secondAttribute="width" id="VFE-Pd-wY3"/>
+                            <constraint firstAttribute="height" secondItem="yle-3s-hMV" secondAttribute="height" id="jEu-gI-aGp"/>
+                            <constraint firstAttribute="width" secondItem="yle-3s-hMV" secondAttribute="width" id="lQA-Iw-Ben"/>
+                            <constraint firstAttribute="centerX" secondItem="yle-3s-hMV" secondAttribute="centerX" id="ngg-9a-Kp3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Og0-pi-ep4"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yle-3s-hMV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="lQA-Iw-Ben"/>
+                                <exclude reference="jEu-gI-aGp"/>
+                                <exclude reference="ngg-9a-Kp3"/>
+                                <exclude reference="RuC-Oj-vtg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yle-3s-hMV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="lQA-Iw-Ben"/>
+                                <include reference="jEu-gI-aGp"/>
+                                <include reference="ngg-9a-Kp3"/>
+                                <include reference="RuC-Oj-vtg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ncs-qD-RjL"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBf-x6-8w3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="2365.8170914542729"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Artist" width="308" height="300"/>
+        <image name="Bowler" width="650" height="829"/>
         <image name="Golconda" width="414" height="329.5"/>
         <image name="Info" width="48" height="48"/>
         <image name="Logo2" width="159.5" height="136"/>
