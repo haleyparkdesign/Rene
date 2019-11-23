@@ -18,17 +18,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OZj-Ke-B1e">
                                 <rect key="frame" x="86" y="263" width="202" height="107"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="OZj-Ke-B1e" secondAttribute="height" multiplier="15:8" id="dtn-cW-gpx"/>
+                                    <constraint firstAttribute="width" secondItem="OZj-Ke-B1e" secondAttribute="height" multiplier="15:8" constant="1.375" id="dtn-cW-gpx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OZj-Ke-B1e" secondAttribute="bottom" constant="327" id="Qo3-3M-tar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OZj-Ke-B1e" secondAttribute="bottom" constant="297" id="Qo3-3M-tar"/>
                             <constraint firstItem="OZj-Ke-B1e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dDF-ou-yvQ"/>
-                            <constraint firstItem="OZj-Ke-B1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="hE7-IX-ox0"/>
+                            <constraint firstItem="OZj-Ke-B1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="hE7-IX-ox0"/>
                             <constraint firstItem="OZj-Ke-B1e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kdP-KC-LPE"/>
-                            <constraint firstItem="OZj-Ke-B1e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="281" id="toB-8p-IYQ"/>
+                            <constraint firstItem="OZj-Ke-B1e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="263" id="toB-8p-IYQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

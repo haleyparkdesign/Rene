@@ -13,20 +13,31 @@ class FourthViewController: UIViewController, ARSCNViewDelegate {
     private let birdPlane = SCNPlane(width: planeWidth, height: planeHeight)
     private let birdNode = SCNNode()
     private var scale: CGFloat = 1
+
+    @IBOutlet var sceneView: ARSCNView!
     
-    @IBOutlet weak var unsupportedLabel: UILabel!
+    @IBOutlet weak var unsupportedMsg: UIView!
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIButton!
+    
+    @IBAction func openGallery(_ sender: Any) {
+        UIApplication.shared.open(URL(string:"photos-redirect://")!)
+    }
+    
+    @IBOutlet weak var takePhotoBtn: UIButton!
     
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
+        
+        print(screenshot)
+        
         UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(savedImage), nil)
-        
-        // vibration feedback
+
+        // haptic feedback
         AudioServicesPlaySystemSound(1519)
-        
+
         // display picture taken
-        imageView.image = screenshot
+        imageView.setImage(screenshot, for: UIControl.State.normal)
     }
     
     @objc func savedImage(_ im:UIImage, error:Error?, context:UnsafeMutableRawPointer?) {
@@ -36,9 +47,6 @@ class FourthViewController: UIViewController, ARSCNViewDelegate {
         }
         print("successfully saved image")
     }
-    
-    
-    @IBOutlet var sceneView: ARSCNView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +57,18 @@ class FourthViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         sceneView.delegate = self
-        unsupportedLabel.isHidden = true
+        
+        // hide unsupported msg
+        unsupportedMsg.isHidden = true
+        
+        // set background image fill mode
+        imageView.imageView?.contentMode = .scaleAspectFill
          
+        // if unsupported device
         guard ARFaceTrackingConfiguration.isSupported else {
-            // show unsupported device message
-            unsupportedLabel.isHidden = false
+            // show unsupported device message & hide takePhoto btn
+            unsupportedMsg.isHidden = false
+            takePhotoBtn.isHidden = true
             return
         }
     }

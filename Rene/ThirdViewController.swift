@@ -14,9 +14,19 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
     private let appleNode = SCNNode()
     private var scale: CGFloat = 1
     
-    @IBOutlet weak var unsupportedLabel: UILabel!
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var sceneView: ARSCNView!
+    
+    @IBOutlet weak var unsupportedMsg: UIView!
+    
+    
+    @IBOutlet weak var imageView: UIButton!
+    
+    @IBAction func openGallery(_ sender: Any) {
+         UIApplication.shared.open(URL(string:"photos-redirect://")!)
+    }
+    
+    @IBOutlet weak var takePhotoBtn: UIButton!
     
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
@@ -26,7 +36,7 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         AudioServicesPlaySystemSound(1519)
         
         // display picture taken
-        imageView.image = screenshot
+        imageView.setImage(screenshot, for: UIControl.State.normal)
     }
     
     @objc func savedImage(_ im:UIImage, error:Error?, context:UnsafeMutableRawPointer?) {
@@ -37,9 +47,6 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         print("successfully saved image")
     }
     
-    
-    @IBOutlet var sceneView: ARSCNView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,11 +56,16 @@ class ThirdViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         sceneView.delegate = self
-        unsupportedLabel.isHidden = true
+        
+        unsupportedMsg.isHidden = true
+        
+        // set background image fill mode
+        imageView.imageView?.contentMode = .scaleAspectFill
          
         guard ARFaceTrackingConfiguration.isSupported else {
             // show unsupported device message
-            unsupportedLabel.isHidden = false
+            unsupportedMsg.isHidden = false
+            takePhotoBtn.isHidden = true
             return
         }
     }

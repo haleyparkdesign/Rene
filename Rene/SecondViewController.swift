@@ -14,17 +14,23 @@ import AudioToolbox // for haptic feedback
 class SecondViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIButton!
+    
+    // redirects to photos app when tapped
+    @IBAction func openGallery(_ sender: Any) {
+        UIApplication.shared.open(URL(string:"photos-redirect://")!)
+    }
     
     @IBAction func takePhoto(_ sender: Any) {
         let screenshot = sceneView.snapshot()
+        
+        // display picture taken
+       imageView.setImage(screenshot, for: UIControl.State.normal)
+        
         UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(savedImage), nil)
         
         // vibration feedback
         AudioServicesPlaySystemSound(1519)
-        
-        // display picture taken
-        imageView.image = screenshot
     }
     
     @objc func savedImage(_ im:UIImage, error:Error?, context:UnsafeMutableRawPointer?) {
@@ -32,7 +38,6 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
             print(err)
             return
         }
-        
         print("successfully saved image")
     }
     
@@ -55,6 +60,9 @@ class SecondViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        // set background image fill mode
+        imageView.imageView?.contentMode = .scaleAspectFill
     }
     
     override func viewWillAppear(_ animated: Bool) {
