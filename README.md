@@ -1,6 +1,6 @@
 # René
 
-![Rene Thumbnail](./Images/thumbnail.png)
+![Rene Thumbnail](https://p47.f4.n0.cdn.getcloudapp.com/items/lluwrk8Y/thumbnail.png?v=c220400e264cb5bc0bfe88bdfdcfd90a "Rene Thumbnail")
 
 René is an AR app that turns your surroundings into a René Magritte painting.
 
@@ -9,9 +9,8 @@ René is an AR app that turns your surroundings into a René Magritte painting.
 2. Take a picture.
 3. Read information about the painting and the artist.
 
-![Golconda](./Images/Golconda.gif) ![Son of man](./Images/sonofman.gif) ![Man in a bowler had](./Images/bowler.gif)
+![Golconda](https://p47.f4.n0.cdn.getcloudapp.com/items/p9uzWNYP/Golconda.gif?v=ceb4f6ee41673cbfefeb48c7de930273) ![Son of man](https://p47.f4.n0.cdn.getcloudapp.com/items/OAuxYG7W/sonofman.gif?v=8e98e4a213e02e1f7c05bfbf4ee95818) ![Man in a bowler hat](https://p47.f4.n0.cdn.getcloudapp.com/items/YEuvLPeE/bowler.gif?v=a21e5aea92585be6b83d641c0bddf8ba)
 
- *You need a device with a TrueDepth front-facing camera for face tracking features.
 
 # Citations & References
 ### Face tracking
