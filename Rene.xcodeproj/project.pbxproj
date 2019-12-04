@@ -130,8 +130,8 @@
 				97017C302374908A009982A2 /* SecondViewController.swift */,
 				972F55B12383648B008F46BF /* ThirdViewController.swift */,
 				977BA13E23886F8F0098031D /* FourthViewController.swift */,
-				971AE5E62385F17E00BCBBFA /* InfoViewController.swift */,
 				974F3861238CDC25009F5F92 /* FifthViewController.swift */,
+				971AE5E62385F17E00BCBBFA /* InfoViewController.swift */,
 			);
 			path = Rene;
 			sourceTree = "<group>";

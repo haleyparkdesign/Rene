@@ -11,7 +11,12 @@ import SceneKit
 import ARKit
 import AudioToolbox // for haptic feedback
 
+
+private let planeWidth: CGFloat = 1
+private let planeHeight: CGFloat = 1
+
 class FifthViewController: UIViewController, ARSCNViewDelegate {
+    
     @IBOutlet var sceneView: ARSCNView!
     
     @IBOutlet weak var imageView: UIButton!
@@ -55,14 +60,17 @@ class FifthViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = false
         sceneView.automaticallyUpdatesLighting = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "Models.scnassets/rock.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
-        
         // set background image fill mode
         imageView.imageView?.contentMode = .scaleAspectFill
+        
+        // create and add the rock to the scene
+         let image = UIImage(named: "rock")
+         
+         let node = SCNNode(geometry: SCNPlane(width: 1, height: 1))
+         node.geometry?.firstMaterial?.diffuse.contents = image
+        
+         node.position = SCNVector3Make(0, 0, -1.5)
+         sceneView.pointOfView?.addChildNode(node)
     }
     
     override func viewWillAppear(_ animated: Bool) {

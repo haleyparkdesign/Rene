@@ -444,11 +444,11 @@ Magritte included a likeness of Scutenaire in the painting, his face is used for
                         <viewControllerLayoutGuide type="bottom" id="fSq-7l-Val"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fy1-KB-4wa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1840"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1880"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RS9-9z-GrH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1840"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1880"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artist" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-no-Psz">
                                         <rect key="frame" x="0.0" y="326" width="375" height="372"/>
@@ -475,17 +475,19 @@ Magritte included a likeness of Scutenaire in the painting, his face is used for
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-Kv-7fi">
-                                        <rect key="frame" x="20" y="730" width="335" height="1082"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="51" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKs-Kv-7fi">
+                                        <rect key="frame" x="20" y="730" width="335" height="1097"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="673" id="IGg-v3-DIE"/>
-                                            <constraint firstAttribute="height" constant="1082" id="boZ-vn-p4N"/>
+                                            <constraint firstAttribute="height" constant="1097" id="boZ-vn-p4N"/>
                                         </constraints>
-                                        <string key="text">Rene Magritte was an internationally acclaimed surrealist artist of all time, yet it was not until his 50s, when he was finally able to reach some form of fame and recognition for his work. Rene Magritte described his paintings saying, "My painting is visible images which conceal nothing; they evoke mystery and, indeed, when one sees one of my pictures, one asks oneself this simple question, 'What does that mean?' It does not mean anything, because mystery means nothing, it is unknowable."
+                                        <mutableString key="text">Rene Magritte was an internationally acclaimed surrealist artist of all time, yet it was not until his 50s, when he was finally able to reach some form of fame and recognition for his work. Rene Magritte described his paintings saying, "My painting is visible images which conceal nothing; they evoke mystery and, indeed, when one sees one of my pictures, one asks oneself this simple question, 'What does that mean?' It does not mean anything, because mystery means nothing, it is unknowable."
 
-Rene Magritte was born in 1898, to a wealthy manufacturer father. In 1912, his mom was found drowned in the River Sambre. She had committed suicide, and the family was publicly humiliated because of it. From 1916 to 1918, Rene decided to study at the Academie des Beaux-Art, which was located in Brussels. He left the school, because he thought that it was a waste of time. All his paintings afterward reflect cubism, the movements which was introduced by Pablo Picass and was very popular at the time. In 1922 he married Georgette, and took a number of small jobs, including painting cabbage roses for a wallpaper company, in order to be able to pay the bills.
+Rene Magritte was born in 1898, to a wealthy manufacturer father. In 1912, his mom was found drowned in the River Sambre. She had committed suicide, and the family was publicly humiliated because of it. From 1916 to 1918, Rene decided to study at the Academie des Beaux-Art, which was located in Brussels. He left the school, because he thought that it was a waste of time. All his paintings afterward reflect cubism, the movements which was introduced by Pablo Picass and was very popular at the time. 
 
-During the early period of his career, shortly following his marriage, Rene Magritte would spend the free time that he had, creating art forms and worked on a number of pieces; it was during this time period that he realized surrealism was the art form which he most enjoyed. The Threatened Assassin was one of his earliest pieces in 1926, which showcased the surrealist style which he had been working on; The Lost Jockey was another piece that he introduced in 1925, which also showcased this art form. Over the course of his career, he produced a number of variants on this piece, and changed the format to recreate what the viewer was experiencing.</string>
+In 1922 he married Georgette, and took a number of small jobs, including painting cabbage roses for a wallpaper company, in order to be able to pay the bills.
+
+During the early period of his career, shortly following his marriage, Rene Magritte would spend the free time that he had, creating art forms and worked on a number of pieces; it was during this time period that he realized surrealism was the art form which he most enjoyed. The Threatened Assassin was one of his earliest pieces in 1926, which showcased the surrealist style which he had been working on; The Lost Jockey was another piece that he introduced in 1925, which also showcased this art form. Over the course of his career, he produced a number of variants on this piece, and changed the format to recreate what the viewer was experiencing.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="1" green="0.96470588239999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -508,7 +510,7 @@ During the early period of his career, shortly following his marriage, Rene Magr
                                     <constraint firstItem="NKs-Kv-7fi" firstAttribute="top" secondItem="nxR-no-Psz" secondAttribute="bottom" constant="32" id="h2a-cZ-pYg"/>
                                     <constraint firstAttribute="trailing" secondItem="nxR-no-Psz" secondAttribute="trailing" id="qk9-Lk-pA5"/>
                                     <constraint firstItem="u29-0G-hha" firstAttribute="leading" secondItem="RS9-9z-GrH" secondAttribute="leading" constant="24" id="qpl-z3-SpL"/>
-                                    <constraint firstAttribute="bottom" secondItem="NKs-Kv-7fi" secondAttribute="bottom" constant="28" id="ykc-KB-5jK"/>
+                                    <constraint firstAttribute="bottom" secondItem="NKs-Kv-7fi" secondAttribute="bottom" constant="53" id="ykc-KB-5jK"/>
                                     <constraint firstAttribute="trailing" secondItem="u29-0G-hha" secondAttribute="trailing" constant="32" id="zZJ-Uy-DSF"/>
                                 </constraints>
                             </scrollView>
@@ -547,7 +549,7 @@ During the early period of his career, shortly following his marriage, Rene Magr
                     </view>
                     <navigationItem key="navigationItem" id="Aou-G3-dgV"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1860"/>
+                    <size key="freeformSize" width="375" height="1900"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBE-tL-uGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
