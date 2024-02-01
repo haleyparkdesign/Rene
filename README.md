@@ -20,7 +20,7 @@ René is an AR app that turns your surroundings into a René Magritte painting.
 * Information about the artist, Man in a Bowler Hat, Castle of the Pyrenees: [https://www.renemagritte.org](https://www.renemagritte.org/man-in-a-bowler-hat.jsp)
 
 # Questions or feedback?
-Shoot me an email [here](mailto:haleypark.design@gmail.com) or send me a tweet [@haleyparkdesign](https://twitter.com/haleyparkdesign)
+Shoot me an email [here](mailto:haleypark.design@gmail.com) or send me a tweet [@babe_wake_up](https://twitter.com/babe_wake_up)
 
 
 *This is a final project for SSUI 2019 @CMU. 
